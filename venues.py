@@ -3,7 +3,7 @@ import json
 import pymysql
 import os.path
 
-#con = pymysql.connect(host='maarku.beget.tech', user='maarku_football', password='OOw4U%kM', db='maarku_football', cursorclass=pymysql.cursors.DictCursor)
+
 con = pymysql.connect(host='localhost', user='root', password='', db='football', cursorclass=pymysql.cursors.DictCursor)
 cur = con.cursor()
 
@@ -13,7 +13,7 @@ querystring = {"country":"England"}
 
 headers = {
     'x-rapidapi-host': "api-football-v1.p.rapidapi.com",
-    'x-rapidapi-key': "RVTyzDhl7JmshSdsALIXaLcyyFlHp1kGeiLjsnWOQPa8HSEeMu"
+    'x-rapidapi-key': "rapidapi_token"
     }
 
 response = requests.request("GET", url, headers=headers, params=querystring)
